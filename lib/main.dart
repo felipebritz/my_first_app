@@ -39,22 +39,24 @@ class _MyHomePageState extends State<MyHomePage> {
   _onLongPress() {
     setState(() {
       _calc = 1;
-    });    
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: GestureDetector(
-          child: Text('calc: $_calc'),
-          onTap: _onTap,
-          onLongPress: _onLongPress,
+        appBar: AppBar(
+          title: Text(widget.title),
         ),
-      )
-    );
+        body: Center(
+          child: GestureDetector(
+            child: Text(
+              'calc: $_calc',
+              style: TextStyle(fontSize: 28.0),
+            ),
+            onTap: _onTap,
+            onLongPress: _onLongPress,
+          ),
+        ));
   }
 }
